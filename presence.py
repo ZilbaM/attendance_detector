@@ -16,6 +16,20 @@ br.set_handle_robots(False)
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
-br.open("https://www.leonard-de-vinci.net/student/presences/")
 
-print(br.geturl())
+from selenium import webdriver 
+driver = webdriver.Chrome('C:/Users/lucas/OneDrive/Documents/IIM/A2/crea-tech/attendance_detector/chromedriver.exe') 
+driver.get("https://www.leonard-de-vinci.net/student/presences/27627136") 
+html = driver.page_source 
+
+presence_alert = driver.find_element_by_class_name('alert')
+print(presence_alert.)
+
+"""
+br.open("https://www.leonard-de-vinci.net/")
+response1 = br.follow_link(nr=2)
+print(response1.geturl())
+print(response1.info())
+
+
+print(br.title()) """
