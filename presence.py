@@ -22,8 +22,8 @@ driver = webdriver.Chrome('C:/Users/lucas/OneDrive/Documents/IIM/A2/crea-tech/at
 driver.get("https://www.leonard-de-vinci.net/student/presences/27627136") 
 html = driver.page_source 
 
-
 presence_alert = driver.find_element_by_css_selector('#login')
+presence_alert = driver.find_element_by_('#login')
 presence_alert.send_keys('1')
 
 
